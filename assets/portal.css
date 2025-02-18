@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #3b3434, #691b58, #c41492);
+    color: white;
+    padding-top: 30px;
+    position: fixed;
+}
+
+.sidebar-header h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px;
+    border-bottom: 1px solid #34495e;
+    text-align: center;
+}
+
+.sidebar-menu li a {
+    color: #b8c2cc;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+#user-name{
+    /* background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    -webkit-background-clip: text;
+    background-clip: content-box; */
+    color:#ff9a9e;
+    /* -webkit-text-fill-color: transparent; */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+header {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .welcome h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Dashboard Cards */
+.content {
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    font-size: 16px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
