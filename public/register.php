@@ -1,36 +1,6 @@
 <?php
 session_start();
-
-// Check if session has a success message
-if (isset($_SESSION['success'])) {
-    $username = $_SESSION['success']['username'];
-    $email = $_SESSION['success']['email'];
-    echo "<script>
-        Swal.fire({
-            title: 'Registration Successful!',
-            text: 'Welcome, $username! Your email: $email',
-            icon: 'success',
-            confirmButtonText: 'Continue'
-        });
-    </script>";
-    unset($_SESSION['success']); // Clear success session
-}
-
-// Check if session has an error message
-if (isset($_SESSION['error'])) {
-    $errorMessage = $_SESSION['error'];
-    echo "<script>
-        Swal.fire({
-            title: 'Error!',
-            text: '$errorMessage',
-            icon: 'error',
-            confirmButtonText: 'Try Again'
-        });
-    </script>";
-    unset($_SESSION['error']); // Clear error session
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +63,37 @@ if (isset($_SESSION['error'])) {
         <!-- Footer content -->
     </footer>
 
-    <script src="notification.js"></script> <!-- Ensure this file exists and is functional -->
+<?php    
+    // Check if session has a success message
+if (isset($_SESSION['success'])) {
+    $username = $_SESSION['success']['username'];
+    $email = $_SESSION['success']['email'];
+    echo "<script>
+        Swal.fire({
+            title: 'Registration Successful!',
+            text: 'Welcome, $username! Your email: $email',
+            icon: 'success',
+            confirmButtonText: 'Continue'
+        });
+    </script>";
+    unset($_SESSION['success']); // Clear success session
+}
+
+
+// Check if session has an error message
+if (isset($_SESSION['error'])) {
+    $errorMessage = $_SESSION['error'];
+    echo "<script>
+        Swal.fire({
+            title: 'Error!',
+            text: '$errorMessage',
+            icon: 'error',
+            confirmButtonText: 'Try Again'
+        });
+    </script>";
+    unset($_SESSION['error']); // Clear error session
+}
+
+?>
 </body>
 </html>
