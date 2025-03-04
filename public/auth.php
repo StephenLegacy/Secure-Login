@@ -21,6 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['login_status'] = "failed"; // Indicate login failure
     }
 
-    header("Location: login.php"); // Redirect back to login for pop-up message
+    header("Location: index.php"); // Redirect back to login for pop-up message
     exit;
 }
