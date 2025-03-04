@@ -30,20 +30,7 @@ $profile_picture = !empty($user["profile_picture"]) ? $user["profile_picture"] :
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Dashboard</title>
     <link rel="stylesheet" href="/assets/portal.css">
-    <style>
-        .profile-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .profile-pic {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ccc;
-        }
-    </style>
+
 </head>
 <body>
 
@@ -62,7 +49,7 @@ $profile_picture = !empty($user["profile_picture"]) ? $user["profile_picture"] :
     <div class="main-content">
         <header>
             <div class="profile-container">
-                <img src="/uploads/<?php echo htmlspecialchars($profile_picture); ?>" alt="Profile Picture" class="profile-pic">
+                
                 <h1>Welcome, <span id="user-name"><?php echo $username; ?></span></h1>
             </div>
         </header>

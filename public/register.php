@@ -40,6 +40,14 @@ session_start();
                 <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
 
                 <button type="submit">Register</button>
+                <<button id="backToLogin" type="button">Log In</button>
+
+                <script>
+                    document.getElementById("backToLogin").addEventListener("click", function() {
+                        window.location.href = "login.php";
+                    });
+                </script>
+
             </form>
         </div>
 
