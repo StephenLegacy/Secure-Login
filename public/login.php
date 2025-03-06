@@ -48,7 +48,7 @@ session_start();
             </div>
             <div class="info-box">
                 <i class="fas fa-envelope"></i>
-                <p>info@securelogin.com</p>
+                <p>info@securelogin.io</p>
             </div>
         </div>
     </div>
